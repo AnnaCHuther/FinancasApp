@@ -1,5 +1,7 @@
-﻿using FinancasApp.Domain.Dtos.Responses
-    ;
+﻿
+
+using FinancasApp.Domain.Dtos.Requests;
+using FinancasApp.Domain.Dtos.Responses;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,7 +12,9 @@ namespace FinancasApp.Domain.Interfaces.Services
 {
     public interface IUsuarioDomainService
     {
-        AutenticarUsuarioResponseDto Autenticar(AutenticarUsuarioResponseDto dto);
-        CriarUsuarioResponseDto Criar(CriarUsuarioResponseDto dto);
+        AutenticarUsuarioResponseDto Autenticar(AutenticarUsuarioRequestDto dto);
+        CriarUsuarioResponseDto Criar(CriarUsuarioRequestDto dto);
     }
 }
+
+

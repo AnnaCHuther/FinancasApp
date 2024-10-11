@@ -1,4 +1,8 @@
-﻿using FinancasApp.Domain.Dtos.Responses;
+﻿
+
+
+using FinancasApp.Domain.Dtos.Requests;
+using FinancasApp.Domain.Dtos.Responses;
 using FinancasApp.Domain.Entities;
 using FinancasApp.Domain.Helpers;
 using FinancasApp.Domain.Interfaces.Repositories;
@@ -22,7 +26,7 @@ namespace FinancasApp.Domain.Services
             _usuarioRepository = usuarioRepository;
         }
 
-        public AutenticarUsuarioResponseDto Autenticar(AutenticarUsuarioResponseDto dto)
+        public AutenticarUsuarioResponseDto Autenticar(AutenticarUsuarioRequestDto dto)
         {
             //consultar o usuário no banco de dados através do email e da senha
             var usuario = _usuarioRepository.Get(dto.Email, CryptoHelper.GetSha256(dto.Senha));
@@ -43,7 +47,7 @@ namespace FinancasApp.Domain.Services
             };
         }
 
-        public CriarUsuarioResponseDto Criar(CriarUsuarioResponseDto dto)
+        public CriarUsuarioResponseDto Criar(CriarUsuarioRequestDto dto)
         {
             //verificar se o email já está cadastrado no banco de dados
             if (_usuarioRepository.VerifyExists(dto.Email))
@@ -66,8 +70,11 @@ namespace FinancasApp.Domain.Services
             {
                 Id = usuario.Id,
                 Nome = usuario.Nome,
-                Email = usuario.Email
+                Email = usuario.Email,
+                DataHoraCadastro = DateTime.Now
             };
         }
     }
 }
+
+

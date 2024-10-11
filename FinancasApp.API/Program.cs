@@ -1,5 +1,6 @@
 using FinancasApp.Domain.Interfaces.Repositories;
 using FinancasApp.Domain.Interfaces.Services;
+using FinancasApp.Domain.Services;
 using FinancasApp.Infra.Data.Repositories;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -24,9 +25,9 @@ builder.Services.AddCors(
 );
 
 // Configuração para injeção de dependência para os serviços do domínio
-builder.Services.AddTransient<IUsuarioDomainService, IUsuarioDomainService>();
-builder.Services.AddTransient<ICategoriaDomainService, ICategoriaDomainService>();
-builder.Services.AddTransient<IContaDomainService, IContaDomainService>();
+builder.Services.AddTransient<IUsuarioDomainService, UsuarioDomainService>();
+builder.Services.AddTransient<ICategoriaDomainService, CategoriaDomainService>();
+builder.Services.AddTransient<IContaDomainService, ContaDomainService>();
 
 // Configuração para injeção de dependência para os repositórios
 builder.Services.AddTransient<IUsuarioRepository, UsuarioRepository>();
