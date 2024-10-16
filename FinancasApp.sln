@@ -24,6 +24,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Itens de Solução", "Itens
 		docker-compose.yml = docker-compose.yml
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FinancasApp.Infra.Security", "FinancasApp.Infra.Security\FinancasApp.Infra.Security.csproj", "{2C3AE87D-A686-419D-8159-3C20D6545CF2}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -46,6 +48,10 @@ Global
 		{6CB4D0B1-D0B8-4B5E-914C-ED932F0326BC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6CB4D0B1-D0B8-4B5E-914C-ED932F0326BC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6CB4D0B1-D0B8-4B5E-914C-ED932F0326BC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2C3AE87D-A686-419D-8159-3C20D6545CF2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2C3AE87D-A686-419D-8159-3C20D6545CF2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2C3AE87D-A686-419D-8159-3C20D6545CF2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2C3AE87D-A686-419D-8159-3C20D6545CF2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -55,6 +61,7 @@ Global
 		{EE9A3B85-7F7E-4A86-9690-F28C0E8F280C} = {A36FA33E-C0C3-4022-915B-A33CE9A3C97B}
 		{E208D152-0D3C-4B66-B57D-415FD75C3650} = {7AF729FA-F1F8-43E3-BCBC-C6EA46B3A77F}
 		{6CB4D0B1-D0B8-4B5E-914C-ED932F0326BC} = {26632DE6-73BB-45AA-92AD-20603AD7792A}
+		{2C3AE87D-A686-419D-8159-3C20D6545CF2} = {26632DE6-73BB-45AA-92AD-20603AD7792A}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {9688B21C-80A6-47F9-8EC3-A4F28E1EECA1}
